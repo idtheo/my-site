@@ -10,124 +10,121 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: linear-gradient(135deg, #fefefe, #d0e8ff 80%);
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
+    background:
+      linear-gradient(130deg, #fefefe, #e8f1ff 75%, #def2fc 100%),
+      url('https://drive.google.com/uc?export=download&id=1MTQiWD8-SHvc4rvh6gOzpAOOYxJMgbX3') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+    position: relative;
+    z-index: 0;
   }
   .container {
-    background: white;
+    max-width: 420px;
+    width: 96vw;
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(255,105,180,0.20), 0 1.5px 10px rgba(59,130,246,0.06);
-    padding: 40px 36px 30px 36px;
-    max-width: 430px;
-    width: 100%;
+    padding: 42px 38px 30px 38px;
+    box-shadow: 0 9px 35px rgba(255, 105, 180, 0.14), 0 1.5px 10px rgba(59, 130, 246, 0.09);
     text-align: center;
     position: relative;
-    overflow: hidden;
+    z-index: 2;
   }
-  .container::before, .container::after {
+  .container::before, 
+  .container::after {
     content: '';
     position: absolute;
     border-radius: 50%;
-    filter: blur(75px);
+    filter: blur(65px);
     z-index: 0;
   }
   .container::before {
-    top: -60px; left: -60px; width: 130px; height: 130px;
+    top: -54px; left: -54px; width: 120px; height: 120px;
     background: #ff69b4;
-    opacity: 0.21;
-    animation: pulse 4.8s infinite alternate;
+    opacity: 0.17;
   }
   .container::after {
-    bottom: -45px; right: -35px; width: 110px; height: 110px;
+    bottom: -40px; right: -40px; width: 90px; height: 90px;
     background: #3b82f6;
-    opacity: 0.18;
-    animation: pulse 5.7s infinite alternate;
-  }
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.18; }
-    100% { transform: scale(1.28); opacity: 0.09; }
+    opacity: 0.14;
   }
   h1 {
     font-family: 'Press Start 2P', cursive;
     color: #ff4081;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: normal;
-    margin-bottom: 1.4rem;
     margin-top: 0.1rem;
-    letter-spacing: 2px;
+    margin-bottom: 1.1rem;
     line-height: 1.3;
-    z-index: 2;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px #ffd6f7;
+    z-index: 3;
+    position: relative;
   }
   .desc {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 2.1rem;
+    font-size: 1.08rem;
+    color: #3d4260;
+    margin-bottom: 2.2rem;
     font-weight: 400;
-    z-index: 2;
+    line-height: 1.6;
   }
   a.button {
     display: inline-block;
-    background-color: #3b82f6;
-    color: white;
+    background: linear-gradient(90deg, #3b82f6 70%, #6be5ff 99%);
+    color: #fff;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.04rem;
+    font-weight: bold;
+    font-size: 1.07rem;
     text-decoration: none;
-    padding: 14px 32px;
-    margin-bottom: 2.2rem;
-    border-radius: 33px;
-    box-shadow: 0 5px 16px rgba(59,130,246,0.15);
+    padding: 15px 32px;
+    margin-bottom: 2.1rem;
+    border-radius: 35px;
+    box-shadow: 0 5px 18px rgba(59,130,246,0.18);
     border: none;
-    transition: background 0.23s, box-shadow 0.23s;
+    transition: background 0.2s, box-shadow 0.2s;
     letter-spacing: 1px;
-    z-index: 2;
   }
   a.button:hover {
-    background: linear-gradient(90deg, #2563eb, #3b82f6 90%);
-    box-shadow: 0 9px 27px rgba(59,130,246,0.26);
+    background: #255ad9;
+    box-shadow: 0 9px 29px rgba(59,130,246,0.24);
   }
   .contact-info {
-    margin-top: 0.6rem;
-    color: #666;
+    margin-top: 0.5rem;
+    color: #545478;
     text-align: center;
     z-index: 2;
   }
   .contact-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
-    margin-bottom: 0.9rem;
-    margin-top: 0.7rem;
-    color: #333;
-    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+    color: #294484;
+    letter-spacing: 0.4px;
   }
   .mono {
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     background: #f6fbfe;
     display: inline-block;
-    padding: 7px 17px 6px 17px;
+    padding: 7px 17px 7px 17px;
     margin: 4px 0;
-    border-radius: 8px;
-    color: #0e3060;
-    box-shadow: 0 1px 2.5px rgba(59,130,246,0.07);
+    border-radius: 7px;
+    color: #0d375a;
     letter-spacing: 0.8px;
     font-weight: 500;
   }
-  /* Responsive */
   @media (max-width: 600px) {
-    .container { padding: 24px 7vw; }
-    h1 { font-size: 1.02rem; }
-    .desc { font-size: 1rem; }
-    a.button { font-size: 0.98rem; padding: 12px 8vw; }
-    .contact-info { font-size: 0.91rem; }
+    .container { padding: 18px 3vw; }
+    h1 { font-size: 0.93rem; }
+    .desc { font-size: 0.91rem; }
+    a.button { font-size: 0.95rem; padding: 10px 5vw; }
     .mono { font-size: 0.85rem; padding: 5px 8px; }
   }
 </style>
@@ -139,7 +136,9 @@
       Your safe and fast VPN service for<br>
       protecting your online privacy anywhere in the world.
     </div>
-    <a href="https://t.me/RalphVPNbot" class="button" target="_blank" rel="noopener noreferrer">Go to Telegram Bot</a>
+    <a href="https://t.me/RalphVPNbot" class="button" target="_blank" rel="noopener noreferrer">
+      Go to Telegram Bot
+    </a>
     <div class="contact-info">
       <div class="contact-title">Contact us</div>
       <div class="mono">username: @RalphVPNbot</div><br>
