@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Secure VPN Service</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fefefe, #d0e8ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.25);
+    padding: 40px 60px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .container::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+    background: #ff69b4;
+    opacity: 0.3;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: pulse 6s infinite alternate;
+  }
+  .container::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: #3b82f6;
+    opacity: 0.3;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: pulse 5s infinite alternate-reverse;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.3);
+      opacity: 0.1;
+    }
+  }
+  h1 {
+    font-weight: 600;
+    color: #ff4081;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  a.button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  a.button:hover {
+    background-color: #2563eb;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.7);
+  }
+  .contact-info {
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to SecureVPN</h1>
+    <p>Your safe and fast VPN service for protecting your online privacy anywhere in the world.</p>
+    <a href="https://t.me/YourBotUsername" class="button" target="_blank" rel="noopener noreferrer">Go to Telegram Bot</a>
+    <div class="contact-info">
+      <p>Contact us:</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Email: support@securevpn.com</p>
+    </div>
+  </div>
+</body>
+</html>
